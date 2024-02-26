@@ -1,0 +1,108 @@
+body {
+  font-family: Tahoma, sans-serif;
+  font-size: 18px;
+  text-align: center; 
+  color: rgb(70, 2, 22); 
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to bottom right, #e4cdcd, #ffffff); /* Gradient background from top to bottom right */
+}
+
+header, footer {
+  color: rgb(70, 2, 22); 
+  padding: 20px;
+}
+
+header {
+  background: linear-gradient(to bottom right, #e4cdcd, #ffffff);
+}
+
+.profile-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 2px solid #790202;
+  margin: 0 auto 10px; 
+  display: block; 
+}
+
+.header-content {
+  display: inline-block; 
+}
+nav {
+  display: flex;
+  justify-content: space-between; 
+  overflow: hidden; 
+  animation: slide-left-right 10s infinite alternate; 
+}
+
+@keyframes slide-left-right {
+  0% {
+    transform: translateX(-10%); 
+  }
+  100% {
+    transform: translateX(10%); 
+  }
+}
+
+nav a {
+  text-decoration: none; 
+  color: black; 
+  padding: 0 20px; 
+}
+
+nav a:hover {
+  color: blue; 
+}
+
+
+nav ul {
+  padding-left: 20px; 
+}
+
+nav ul li {
+  display: inline-block;
+  margin-right: 20px;
+  padding-left: 10px;
+}
+
+
+.content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.left-column,
+.right-column {
+  width: 48%;
+  display: inline-block; 
+}
+
+.left-column {
+  border-right: 1px solid #ccc;
+  padding-right: 20px;
+  margin-right: 20px; 
+}
+
+.right-column {
+  padding-left: 20px;
+  margin-left: 20px; 
+}
+
+section {
+  padding: 40px 0;
+}
+
+@media screen and (max-width: 768px) {
+  .content {
+    flex-direction: column;
+  }
+
+  .left-column,
+  .right-column {
+    width: 100%;
+    border: none;
+    padding: 0;
+    margin: 0; 
+  }
+}
